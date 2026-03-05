@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>20桌婚礼 · 每桌10人</title>
+    <!-- PWA 配置 -->
+    <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22%E5%A9%9A%E7%A4%BC%E6%8E%92%E5%BA%A7%20%2020%E6%A1%8C%22%2C%22short_name%22%3A%22%E5%A9%9A%E5%AE%B420%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23fff8f7%22%2C%22theme_color%22%3A%22%23b13e3e%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAADf0lEQVR4nO2aTWhcVRTHf29GJBStn5SALYjQFhFciC4EFcSNoCtxUcGVCIrUXShdiAhKXXVjBReKLnShCxUUBF1IRcGFolKkFcSyi6B+gFhLK6S2oJ8L/2dMzLt5796ZO+/emUnyP0uYee+ec37v3HPP3NwUBQUFBQUFBT2i0m9Fqoz6F1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1UzqhbV/wE4nHrlTlT5fQAAAABJRU5ErkJggg%3D%3D%22%2C%22sizes%22%3A%2260x60%22%2C%22type%22%3A%22image/png%22%7D%5D%7D">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="20桌婚礼">
+    <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAADf0lEQVR4nO2aTWhcVRTHf29GJBStn5SALYjQFhFciC4EFcSNoCtxUcGVCIrUXShdiAhKXXVjBReKLnShCxUUBF1IRcGFolKkFcSyi6B+gFhLK6S2oJ8L/2dMzLt5796ZO+/emUnyP0uYee+ec37v3HPP3NwUBQUFBQUFBT2i0m9Fqoz6F1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1Uzqhb1H1UzqhbV/wE4nHrlTlT5fQAAAABJRU5ErkJggg==">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', system-ui, sans-serif;
+            background: #f5e3df;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            touch-action: pan-y;
+        }
+
+        .user-bar {
+            background: #ffffffdd;
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ffc3b0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .user-avatar {
+            width: 36px;
+            height: 36px;
+            background: #b13e3e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .user-name {
+            font-weight: 600;
+            color: #642f27;
+        }
+
+        .save-status {
+            font-size: 12px;
+            color: #4CAF50;
+            background: #e8f5e9;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+            background: #fffaf5;
+            box-shadow: 0 25px 50px -8px rgba(140, 70, 60, 0.3);
+            overflow: hidden;
+            border: 1px solid #fcd0c6;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fixed-button-container {
+            position: sticky;
+            top: 0;
+            z-index: 90;
+            display: flex;
+            justify-content: center;
+            padding: 8px 0;
+            background: #fffaf5;
+            border-bottom: 1px solid #ffd9d4;
+        }
+
+        .center-buttons {
+            display: flex;
+            gap: 12px;
+            background: #ffffffdd;
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(177, 62, 62, 0.2);
+            border: 1px solid #ffb4a2;
+        }
+
+        .icon-btn {
+            background: #fff2ed;
+            border: 1px solid #ffb4a2;
+            border-radius: 40px;
+            padding: 8px 16px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #642f27;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 6px rgba(190, 80, 60, 0.2);
+        }
+
+        .icon-btn:active {
+            background: #ffe0d6;
+            transform: scale(0.96);
+        }
+
+        .canvas-wrapper {
+            flex: 1;
+            background: #faf0ea;
+            background-image: radial-gradient(circle at 20px 20px, #f0d9d1 2px, transparent 2px), 
+                              radial-gradient(circle at 80px 150px, #f0d9d1 2px, transparent 2px);
+            background-size: 60px 60px, 120px 120px;
+            position: relative;
+            overflow: hidden;
+            touch-action: none;
+        }
+
+        #zoomContainer {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-origin: 0 0;
+            background: transparent;
+            will-change: transform;
+        }
+
+        #dragCanvas {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+        }
+
+        /* 舞台可拖动 - 更大更醒目 */
+        .stage-marker {
+            position: absolute;
+            background: #c93f2b;
+            color: #ffefc0;
+            font-size: 28px;
+            font-weight: 800;
+            padding: 15px 40px;
+            border-radius: 60px;
+            box-shadow: 0 10px 0 #752e1e, 0 15px 25px #ac4b38;
+            z-index: 15;
+            border: 4px solid #ffc4a2;
+            letter-spacing: 6px;
+            white-space: nowrap;
+            cursor: grab;
+            touch-action: none;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 80px;
+        }
+
+        /* 桌子更大 (150px) 每桌10人 */
+        .table-drag-item {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: #fff9f2;
+            border-radius: 50%;
+            box-shadow: 0 12px 22px rgba(150, 70, 50, 0.4), 0 0 0 3px #ffc2b0 inset;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: grab;
+            touch-action: none;
+            border: 3px solid #d86b56;
+            will-change: left, top;
+            z-index: 10;
+        }
+
+        .delete-table-btn {
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            background: #c43d3d;
+            color: white;
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            border: 2px solid white;
+            box-shadow: 0 4px 8px #6b2f2f;
+            cursor: pointer;
+            z-index: 200;
+        }
+
+        .table-center-name {
+            background: #b44934;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 6px 12px;
+            border-radius: 40px;
+            max-width: 110px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border: 2px solid #ffc2a1;
+            box-shadow: 0 2px 8px #461b13;
+            z-index: 3;
+            cursor: pointer;
+        }
+
+        /* 宾客名牌 - 10人围一圈 */
+        .guest-chip {
+            position: absolute;
+            background: #fcedda;
+            border: 2px solid #e07e66;
+            border-radius: 40px;
+            padding: 4px 8px;
+            font-size: 11px;
+            font-weight: 600;
+            color: #522e24;
+            white-space: nowrap;
+            max-width: 85px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            box-shadow: 0 3px 6px rgba(110, 40, 20, 0.2);
+            pointer-events: auto;
+            transform: translate(-50%, -50%);
+            z-index: 20;
+            background: #fff3e9;
+        }
+
+        .guest-chip.empty {
+            border: 2px dashed #d49b8a;
+            background: #fae2da;
+            color: #a56553;
+        }
+
+        .seat-adjust {
+            position: absolute;
+            bottom: -8px;
+            right: -8px;
+            background: #b13e3e;
+            color: white;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            border: 2px solid white;
+            box-shadow: 0 4px 8px #aa4c3a;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .footer-panel {
+            background: #fff6f0;
+            padding: 12px 16px;
+            border-top: 1px solid #ffbba8;
+            display: flex;
+            gap: 10px;
+        }
+
+        .big-add-btn {
+            background: #b13e3e;
+            border: none;
+            border-radius: 40px;
+            padding: 12px 20px;
+            font-size: 18px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .reset-btn {
+            background: #f8e3dc;
+            border: 1px solid #c95f48;
+            border-radius: 40px;
+            padding: 12px 16px;
+            font-size: 16px;
+            color: #773d30;
+        }
+
+        .inline-edit-input {
+            position: fixed;
+            background: white;
+            border: 3px solid #d1624b;
+            border-radius: 40px;
+            padding: 8px 16px;
+            font-size: 16px;
+            z-index: 2000;
+            width: 160px;
+            box-shadow: 0 10px 30px black;
+            display: none;
+        }
+
+        .login-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+        }
+
+        .login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 40px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #ffc3b0;
+            border-radius: 30px;
+            font-size: 16px;
+        }
+
+        .login-box button {
+            background: #b13e3e;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 18px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="app-container">
+    <div class="user-bar">
+        <div class="user-info" id="userInfo">
+            <div class="user-avatar">👤</div>
+            <span class="user-name" id="userNameDisplay">加载中...</span>
+        </div>
+        <div class="save-status" id="saveStatus">💾 已保存</div>
+    </div>
+
+    <div class="fixed-button-container">
+        <div class="center-buttons">
+            <button class="icon-btn" id="resetViewBtn"><span>🔍</span> 缩放</button>
+            <button class="icon-btn" id="resetPositionsBtn"><span>🔄</span> 复位</button>
+            <button class="icon-btn" id="saveToWeChatBtn"><span>💾</span> 保存</button>
+        </div>
+    </div>
+
+    <div class="canvas-wrapper" id="canvasWrapper">
+        <div id="zoomContainer">
+            <div id="dragCanvas">
+                <div class="stage-marker" id="stageMarker">✨ 主舞台 ✨</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-panel">
+        <button class="big-add-btn" id="addTableBtn">➕ 增加圆桌</button>
+        <button class="reset-btn" id="resetExampleBtn">🔄 重置20桌</button>
+    </div>
+
+    <div class="login-modal" id="loginModal">
+        <div class="login-box">
+            <h2 style="color: #b13e3e;">🎉 婚礼策划师</h2>
+            <input type="text" id="usernameInput" placeholder="输入昵称" value="婚礼总管">
+            <button id="loginBtn">进入20桌婚礼</button>
+        </div>
+    </div>
+
+    <input type="text" id="guestEditor" class="inline-edit-input" placeholder="输入宾客姓名">
+</div>
+
+<script>
+    (function() {
+        // ========== 初始化20桌数据，每桌10人 ==========
+        let currentUser = localStorage.getItem('wedding_user') || '婚礼总管';
+        let tables = [];
+        let stagePos = { left: 50, top: 80 }; // 舞台位置
+
+        // 生成20桌数据的函数
+        function generate20Tables() {
+            const newTables = [];
+            const names = ['主婚桌', '至亲桌', '贵宾1', '贵宾2', '贵宾3', '朋友A', '朋友B', '朋友C', '同事A', '同事B', 
+                          '同事C', '同学A', '同学B', '同学C', '亲友1', '亲友2', '亲友3', '亲友4', '亲友5', '亲友6'];
+            
+            // 在画布上分布20桌，避免重叠
+            const cols = 4; // 4列
+            const rows = 5; // 5行
+            const startX = 60;
+            const startY = 150;
+            const spacingX = 200;
+            const spacingY = 200;
+
+            for (let i = 0; i < 20; i++) {
+                const row = Math.floor(i / cols);
+                const col = i % cols;
+                
+                // 计算位置，加入一些随机偏移让布局更自然
+                const left = startX + col * spacingX + (Math.random() * 20 - 10);
+                const top = startY + row * spacingY + (Math.random() * 20 - 10);
+                
+                // 生成10个座位，前几个填一些示例姓名
+                const guests = [];
+                for (let j = 0; j < 10; j++) {
+                    if (i === 0 && j < 4) {
+                        const sampleNames = ['张建国', '李秀芬', '王磊', '赵丽'];
+                        guests.push(sampleNames[j] || '');
+                    } else if (i === 1 && j < 3) {
+                        const sampleNames = ['陈红', '刘伟', '周杰'];
+                        guests.push(sampleNames[j] || '');
+                    } else {
+                        guests.push('');
+                    }
+                }
+
+                newTables.push({
+                    id: 'table_' + i + '_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
+                    name: names[i] || `桌 ${i+1}`,
+                    seats: 10,
+                    left: left,
+                    top: top,
+                    guests: guests
+                });
+            }
+            return newTables;
+        }
+
+        // 尝试加载保存的数据，如果没有则生成20桌
+        try {
+            const saved = localStorage.getItem(`wedding_tables_${currentUser}`);
+            if (saved) {
+                tables = JSON.parse(saved);
+                // 确保每桌都是10人（兼容旧数据）
+                tables.forEach(table => {
+                    if (table.seats !== 10) {
+                        table.seats = 10;
+                        if (table.guests.length > 10) table.guests = table.guests.slice(0, 10);
+                        else if (table.guests.length < 10) {
+                            table.guests = [...table.guests, ...Array(10 - table.guests.length).fill('')];
+                        }
+                    }
+                });
+            } else {
+                tables = generate20Tables();
+            }
+            
+            const savedStage = localStorage.getItem(`wedding_stage_${currentUser}`);
+            if (savedStage) {
+                stagePos = JSON.parse(savedStage);
+            }
+        } catch (e) {
+            console.log('加载失败，生成20桌');
+            tables = generate20Tables();
+        }
+
+        document.getElementById('userNameDisplay').textContent = currentUser;
+
+        const canvas = document.getElementById('dragCanvas');
+        const wrapper = document.getElementById('canvasWrapper');
+        const zoomContainer = document.getElementById('zoomContainer');
+        const guestEditor = document.getElementById('guestEditor');
+        const stageMarker = document.getElementById('stageMarker');
+
+        let scale = 0.9; // 默认稍小一点，以便看到更多桌子
+        const MIN_SCALE = 0.5;
+        const MAX_SCALE = 2.5;
+        let lastDistance = 0;
+        let currentEditChip = null;
+
+        // 保存到本地存储
+        function saveToStorage() {
+            try {
+                localStorage.setItem(`wedding_tables_${currentUser}`, JSON.stringify(tables));
+                localStorage.setItem(`wedding_stage_${currentUser}`, JSON.stringify(stagePos));
+                document.getElementById('saveStatus').innerHTML = '💾 已保存 ' + new Date().toLocaleTimeString().substr(0,5);
+                setTimeout(() => {
+                    document.getElementById('saveStatus').innerHTML = '💾 已保存';
+                }, 2000);
+            } catch (e) {}
+        }
+
+        // 绘制所有桌子
+        function renderTables() {
+            canvas.innerHTML = '';
+            canvas.appendChild(stageMarker);
+            
+            stageMarker.style.left = stagePos.left + '%';
+            stageMarker.style.top = stagePos.top + 'px';
+
+            tables.forEach(table => {
+                // 确保座位数为10
+                if (table.guests.length > 10) table.guests = table.guests.slice(0, 10);
+                if (table.guests.length < 10) {
+                    table.guests = [...table.guests, ...Array(10 - table.guests.length).fill('')];
+                }
+                table.seats = 10;
+
+                const tableDiv = document.createElement('div');
+                tableDiv.className = 'table-drag-item';
+                tableDiv.id = table.id;
+                tableDiv.style.left = table.left + 'px';
+                tableDiv.style.top = table.top + 'px';
+
+                // 删除按钮
+                const deleteBtn = document.createElement('div');
+                deleteBtn.className = 'delete-table-btn';
+                deleteBtn.textContent = '🗑️';
+                deleteBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    tables = tables.filter(t => t.id !== table.id);
+                    renderTables();
+                    saveToStorage();
+                });
+                tableDiv.appendChild(deleteBtn);
+
+                // 桌名
+                const nameSpan = document.createElement('div');
+                nameSpan.className = 'table-center-name';
+                nameSpan.textContent = table.name;
+                nameSpan.addEventListener('dblclick', (e) => {
+                    e.stopPropagation();
+                    const newName = prompt('修改桌名', table.name);
+                    if (newName !== null) {
+                        table.name = newName.trim() || '未命名';
+                        renderTables();
+                        saveToStorage();
+                    }
+                });
+                tableDiv.appendChild(nameSpan);
+
+                // 座位调整按钮 (固定10人，但保留以防需要微调)
+                const seatBtn = document.createElement('div');
+                seatBtn.className = 'seat-adjust';
+                seatBtn.textContent = '10';
+                seatBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    alert('本桌固定10人，如需调整请删除后重新添加');
+                });
+                tableDiv.appendChild(seatBtn);
+
+                // 10个宾客座位，均匀分布在圆周上
+                const centerX = 75, centerY = 75, radius = 58; // 半径增大适应10人
+                for (let i = 0; i < 10; i++) {
+                    const angle = (i / 10) * 2 * Math.PI - Math.PI/2;
+                    const x = centerX + radius * Math.cos(angle);
+                    const y = centerY + radius * Math.sin(angle);
+                    const guestName = table.guests[i] || '';
+                    const chip = document.createElement('div');
+                    chip.className = 'guest-chip' + (guestName === '' ? ' empty' : '');
+                    chip.textContent = guestName === '' ? '空位' : guestName;
+                    chip.setAttribute('data-table-id', table.id);
+                    chip.setAttribute('data-seat-index', i);
+                    chip.style.left = x + 'px';
+                    chip.style.top = y + 'px';
+                    chip.addEventListener('dblclick', (e) => {
+                        e.stopPropagation();
+                        openGuestEditor(chip, table.id, i);
+                    });
+                    tableDiv.appendChild(chip);
+                }
+
+                canvas.appendChild(tableDiv);
+            });
+
+            makeDraggable();
+            saveToStorage();
+        }
+
+        // 打开宾客编辑
+        function openGuestEditor(chip, tableId, seatIdx) {
+            const table = tables.find(t => t.id === tableId);
+            if (!table) return;
+            
+            guestEditor.style.display = 'block';
+            guestEditor.value = table.guests[seatIdx] || '';
+
+            const rect = chip.getBoundingClientRect();
+            const wrapperRect = wrapper.getBoundingClientRect();
+            guestEditor.style.left = (rect.left - wrapperRect.left + 20) + 'px';
+            guestEditor.style.top = (rect.top - wrapperRect.top - 45) + 'px';
+            guestEditor.focus();
+
+            const saveHandler = () => {
+                if (table && seatIdx !== undefined) {
+                    table.guests[seatIdx] = guestEditor.value;
+                    renderTables();
+                }
+                guestEditor.style.display = 'none';
+            };
+
+            guestEditor.onkeydown = (e) => {
+                if (e.key === 'Enter') saveHandler();
+            };
+            
+            guestEditor.onblur = saveHandler;
+        }
+
+        // 拖拽功能（桌子 + 舞台）
+        function makeDraggable() {
+            const draggables = document.querySelectorAll('.table-drag-item, #stageMarker');
+            let activeElement = null;
+            let offsetX, offsetY;
+
+            const onPointerMove = (e) => {
+                if (!activeElement) return;
+                e.preventDefault();
+
+                const wrapperRect = wrapper.getBoundingClientRect();
+                let clientX = e.clientX, clientY = e.clientY;
+                if (e.touches) {
+                    clientX = e.touches[0].clientX;
+                    clientY = e.touches[0].clientY;
+                }
+
+                let newLeft = (clientX - wrapperRect.left) / scale - offsetX;
+                let newTop = (clientY - wrapperRect.top) / scale - offsetY;
+
+                // 边界限制
+                const maxLeft = (wrapper.clientWidth / scale) - (activeElement.id === 'stageMarker' ? 180 : 150);
+                const maxTop = (wrapper.clientHeight / scale) - (activeElement.id === 'stageMarker' ? 100 : 150);
+                
+                newLeft = Math.max(10, Math.min(newLeft, maxLeft));
+                newTop = Math.max(10, Math.min(newTop, maxTop));
+
+                if (activeElement.id === 'stageMarker') {
+                    stagePos.left = (newLeft / (wrapper.clientWidth / scale)) * 100;
+                    stagePos.top = newTop;
+                    activeElement.style.left = stagePos.left + '%';
+                    activeElement.style.top = stagePos.top + 'px';
+                } else {
+                    activeElement.style.left = newLeft + 'px';
+                    activeElement.style.top = newTop + 'px';
+                    
+                    const tableId = activeElement.id;
+                    const tableData = tables.find(t => t.id === tableId);
+                    if (tableData) {
+                        tableData.left = newLeft;
+                        tableData.top = newTop;
+                    }
+                }
+            };
+
+            const onPointerUp = () => {
+                if (activeElement) {
+                    activeElement.style.cursor = 'grab';
+                    activeElement = null;
+                    saveToStorage();
+                }
+                document.removeEventListener('mousemove', onPointerMove);
+                document.removeEventListener('mouseup', onPointerUp);
+                document.removeEventListener('touchmove', onPointerMove);
+                document.removeEventListener('touchend', onPointerUp);
+            };
+
+            const onPointerDown = (e) => {
+                if (e.target.classList.contains('delete-table-btn') || 
+                    e.target.classList.contains('guest-chip') ||
+                    e.target.classList.contains('seat-adjust')) return;
+                
+                const target = e.target.closest('.table-drag-item, #stageMarker');
+                if (!target) return;
+                
+                e.preventDefault();
+                activeElement = target;
+                activeElement.style.cursor = 'grabbing';
+
+                const wrapperRect = wrapper.getBoundingClientRect();
+                let clientX = e.clientX, clientY = e.clientY;
+                if (e.touches) {
+                    clientX = e.touches[0].clientX;
+                    clientY = e.touches[0].clientY;
+                }
+
+                const rect = activeElement.getBoundingClientRect();
+                if (activeElement.id === 'stageMarker') {
+                    offsetX = (clientX - wrapperRect.left) / scale - (stagePos.left / 100 * (wrapper.clientWidth / scale));
+                    offsetY = (clientY - wrapperRect.top) / scale - stagePos.top;
+                } else {
+                    offsetX = (clientX - wrapperRect.left) / scale - activeElement.offsetLeft;
+                    offsetY = (clientY - wrapperRect.top) / scale - activeElement.offsetTop;
+                }
+
+                document.addEventListener('mousemove', onPointerMove);
+                document.addEventListener('mouseup', onPointerUp);
+                document.addEventListener('touchmove', onPointerMove, { passive: false });
+                document.addEventListener('touchend', onPointerUp);
+            };
+
+            draggables.forEach(el => {
+                el.removeEventListener('mousedown', onPointerDown);
+                el.removeEventListener('touchstart', onPointerDown);
+                el.addEventListener('mousedown', onPointerDown);
+                el.addEventListener('touchstart', onPointerDown, { passive: false });
+            });
+        }
+
+        // 缩放功能
+        function initPinchZoom() {
+            wrapper.addEventListener('touchstart', (e) => {
+                if (e.touches.length === 2) {
+                    e.preventDefault();
+                    const dx = e.touches[0].clientX - e.touches[1].clientX;
+                    const dy = e.touches[0].clientY - e.touches[1].clientY;
+                    lastDistance = Math.sqrt(dx * dx + dy * dy);
+                }
+            });
+
+            wrapper.addEventListener('touchmove', (e) => {
+                if (e.touches.length === 2) {
+                    e.preventDefault();
+                    const dx = e.touches[0].clientX - e.touches[1].clientX;
+                    const dy = e.touches[0].clientY - e.touches[1].clientY;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    if (lastDistance > 0) {
+                        const delta = distance / lastDistance;
+                        let newScale = scale * delta;
+                        newScale = Math.min(MAX_SCALE, Math.max(MIN_SCALE, newScale));
+                        setScale(newScale);
+                    }
+                    lastDistance = distance;
+                }
+            });
+
+            wrapper.addEventListener('touchend', () => { lastDistance = 0; });
+        }
+
+        function setScale(newScale) {
+            scale = newScale;
+            zoomContainer.style.transform = `scale(${scale})`;
+        }
+
+        // ========== 事件绑定 ==========
+        document.getElementById('addTableBtn').addEventListener('click', () => {
+            if (tables.length >= 30) {
+                alert('最多30桌，已足够');
+                return;
+            }
+            const newId = 'table_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
+            tables.push({
+                id: newId,
+                name: `新增桌 ${tables.length + 1}`,
+                seats: 10,
+                left: 100 + Math.random() * 200,
+                top: 200 + Math.random() * 250,
+                guests: Array(10).fill('')
+            });
+            renderTables();
+        });
+
+        document.getElementById('resetExampleBtn').addEventListener('click', () => {
+            tables = generate20Tables();
+            stagePos = { left: 50, top: 80 };
+            renderTables();
+        });
+
+        document.getElementById('resetViewBtn').addEventListener('click', () => setScale(0.9));
+        
+        document.getElementById('resetPositionsBtn').addEventListener('click', () => {
+            tables = generate20Tables();
+            stagePos = { left: 50, top: 80 };
+            renderTables();
+        });
+
+        document.getElementById('saveToWeChatBtn').addEventListener('click', saveToStorage);
+
+        // 登录相关
+        const loginModal = document.getElementById('loginModal');
+        if (!localStorage.getItem('wedding_user')) {
+            loginModal.style.display = 'flex';
+        }
+
+        document.getElementById('loginBtn').addEventListener('click', () => {
+            const username = document.getElementById('usernameInput').value || '婚礼总管';
+            localStorage.setItem('wedding_user', username);
+            currentUser = username;
+            document.getElementById('userNameDisplay').textContent = username;
+            loginModal.style.display = 'none';
+            
+            try {
+                const saved = localStorage.getItem(`wedding_tables_${username}`);
+                if (saved) {
+                    tables = JSON.parse(saved);
+                } else {
+                    tables = generate20Tables();
+                }
+            } catch (e) {
+                tables = generate20Tables();
+            }
+            renderTables();
+        });
+
+        // 初始化
+        wrapper.style.touchAction = 'none';
+        initPinchZoom();
+        setScale(0.9);
+        renderTables();
+        guestEditor.style.display = 'none';
+
+        // 自动保存
+        setInterval(saveToStorage, 30000);
+    })();
+</script>
+</body>
+</html>
